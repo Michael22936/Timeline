@@ -6,16 +6,23 @@
     <title>Calculator</title>
 </head>
 <body>
-<h1 class="numbers" id="numbers"></h1>
+<div class="numbers" id="numbers">
+    <button type="button">+</button>
+    <button type="button">-</button>
+    <button type="button">/</button>
+    <button type="button">*</button>
+</div>
 <script>
-    const numbersElement = document.getElementById('numbers');
-    let output = '';
-
+    const numbers = document.getElementById('numbers');
     for (let i = 0; i <= 9; i++) {
-        output += i.toString() + ' ';
+        const button = document.createElement("button");
+        button.innerText = `Button ${i + 1}`;
+        button.addEventListener("click", function() {
+            console.log(`Button ${i + 1} clicked!`);
+            // Add more functionality here
+        });
+        numbers.appendChild(button);
     }
-
-    numbersElement.textContent = output;
 </script>
 </body>
 </html>
