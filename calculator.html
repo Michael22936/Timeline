@@ -7,10 +7,9 @@
 <body>
 <h1 id="numbers"></h1>
 <script>
+    const numbersElement = document.getElementById('numbers');
     for ( let i = 0; i <= 9; i++) {
-        console.log("this is a test!!!!!!!!!!!!!!!");
-        console.log(i);
-        document.getElementById('numbers').innerText = i.toString();
+        numbersElement.innerText += i.toString().split(' ').join(' ')
     }
 </script>
 </body>
