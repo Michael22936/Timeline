@@ -8,9 +8,13 @@
 <h1 id="numbers"></h1>
 <script>
     const numbersElement = document.getElementById('numbers');
-    for ( let i = 0; i <= 9; i++) {
-        numbersElement.innerText += i.toString().split(' ').join(' ')
+    let output = '';
+
+    for (let i = 0; i <= 9; i++) {
+        output += i.toString() + ' ';
     }
+
+    numbersElement.textContent = output;
 </script>
 </body>
 </html>
