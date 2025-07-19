@@ -16,9 +16,9 @@
     const numbers = document.getElementById('numbers');
     for (let i = 0; i <= 9; i++) {
         const button = document.createElement("button");
-        button.innerText = `Button ${i + 1}`;
+        button.innerText = `${i}`;
         button.addEventListener("click", function() {
-            console.log(`Button ${i + 1} clicked!`);
+            console.log(`Button ${i} clicked!`);
         });
         numbers.appendChild(button);
     }
